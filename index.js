@@ -9,13 +9,14 @@ module.exports = function (options) {
       this.push(file);
       return cb();
     }
+    var REPLACE_REG = /^define\(\s*(?=\[|function)/;
     var baseUrl = options.baseUrl ? options.baseUrl + '/' : '',
       tempPath = file.cwd + '/' + baseUrl,
       subpath = file.path.replace(tempPath, '');
 
     var result = UglifyJS.minify(file.contents.toString(), {fromString: true}).code;
-    result = result.replace(/^define\(\s*\[/, function () {
-      return "define(\"" + subpath + "\",[";
+    result = result.replace(REPLACE_REG, function () {
+      return "define(\"" + subpath + "\",";
     });
     file.contents = new Buffer(result);
     this.push(file);
