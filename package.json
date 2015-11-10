@@ -1,0 +1,31 @@
+{
+  "name": "gulp-named-modules",
+  "version": "0.0.1",
+  "description": "named a unnamed require module",
+  "main": "index.js",
+  "dependencies": {
+    "through2": "^2.0.0",
+    "uglify-js": "^2.5.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-jshint": "^1.12.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yangjiyuan/gulp-named-modules.git"
+  },
+  "keywords": [
+    "requirejs",
+    "module"
+  ],
+  "author": "YangJiyuan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yangjiyuan/gulp-named-modules/issues"
+  },
+  "homepage": "https://github.com/yangjiyuan/gulp-named-modules#readme"
+}
