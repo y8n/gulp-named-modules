@@ -6,11 +6,6 @@ named a unnamed requirejs module
 ``` bash
 npm install gulp-named-modules --save-dev
 ```
-## Options
-
-__baseUrl__  
-Type:`string`  
-description:the baseUrl configured in requirejs's config.
 
 ## Usage
 
@@ -26,3 +21,16 @@ gulp.task('default', function (fun) {
         .pipe(gulp.dest('dest'));
 });
 ```
+
+## Options
+
+__baseUrl__  
+Type:`string`  
+description:the baseUrl configured in requirejs's config.  
+  
+__useUglify__  
+Type:`boolean`    
+description:use uglify-js or not
+
+## License
+__MIT__
